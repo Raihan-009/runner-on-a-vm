@@ -1,7 +1,8 @@
-name: Self Hosted Runner
-on: push
+name: My Workflow
+on: [push]
 jobs:
-  build:    
-    runs-on: self-hosted
+  build:
+    runs-on: arc-runner-set
     steps:
-      - run: echo 'Hello from self hosted runner'
+      - uses: actions/checkout@v4
+      - run: echo "Hello from self-hosted runner!"
